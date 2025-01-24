@@ -35,7 +35,7 @@ class UrlShorteningController extends Controller
             return response()->json([
                 'error' => 'The URL already exists in the database.',
                 'short_url' => env('SHORT_URL_DOMAIN') . '/' . $url->short_url_code,
-            ], 409); // Return 409 Conflict status
+            ], 200);
         }
 
         return response()->json([
