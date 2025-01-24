@@ -14,17 +14,6 @@ class UrlShorteningController extends Controller
             'original_url' => 'required|url',
         ]);
 
-        
-        /*$request->validate([
-            'original_url' => [
-                'required',
-                'url',
-            ],
-        ], [
-            'original_url.required' => 'The URL field is required.',
-            'original_url.url' => 'Please provide a valid URL format (e.g., https://example.com).',
-        ]);*/
-
         $originalUrl = $request->input('original_url');
 
         // Check if the URL already exists
